@@ -1,8 +1,9 @@
-function createAdder(firstNumber) {
-    return function(secondNumber) {
-        return firstNumber + secondNumber;
-    };
+function createEmptyObject() {
+    return Object.create(null);
 }
 
-const addNumber = createAdder(5);
-console.log(addNumber(3));
+const myObject = createEmptyObject();
+console.log(myObject); // {}
+
+// Проверка
+console.log(Object.getPrototypeOf(myObject) === null); // true
